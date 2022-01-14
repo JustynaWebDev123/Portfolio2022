@@ -1,13 +1,469 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:wght@200&family=Raleway:wght@200&family=Homemade+Apple&family=Licorice&display=swap');
+
+
+body{
+  box-sizing: border-box;
+  padding: 0;
+  margin:0;
+  background-color:black;
+  font-family: 'Raleway', 'Poppins';
+  max-width: 100vw  !important;
+  height: auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+header{
+  display:flex;
+  justify-content: space-between;
+  align-content: center;
+  color:white
 }
+
+.logo{
+ 
+  margin-left:20px;
+  font-size: 2.5em;
+}
+
+li,a{
+  display: block;
+  color:white;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  float: left;
+  animation:fadeInRight;
+  animation-duration: 2s;
+}
+
+video{
+  width: 100vw;
+  max-height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.myIntro{
+  width:40%;
+  color: rgba(255, 255, 255, 0.788);
+  letter-spacing:1px;
+  position: absolute;
+  padding: 1rem;
+  height: 75vh;
+  animation: fadeInLeft;
+  animation-duration: 2s;
+}
+
+.myIntro-Btns{ 
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content:space-between;
+  align-content: center;
+}
+
+.btn{
+  width:45%;
+  padding:10px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  letter-spacing:1px;
+  position: relative;
+  color: #fff;
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  background : rgba(0, 0, 0, 0.315);
+  left: 0;
+  bottom: 0;
+  transition: all .3s;
+
+}
+
+.btn:hover:before {
+  width: 100%;
+}
+
+
+.projects-container{
+  display:grid;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  border-radius:50%;
+  top:70px;
+  right:0;
+  bottom:0;
+  margin-right: 4rem;
+  width:40%;
+  height: 550px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  animation: crazy-spin infinite 35s linear;
+}
+
+
+@keyframes crazy-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+.projects-container:hover{
+  animation-play-state: paused;
+}
+
+
+
+.hexagon1, .hexagon2, .hexagon3, .hexagon4, .hexagon5, .hexagon6, .hexagon7{
+  position: relative;
+  width: 150px; 
+  height: 86.60px;
+  background-color: transparent;
+  margin: 43.30px 0;
+  border-left: solid 2px #0e012e;
+  border-right: solid 2px #0e012e;
+  cursor: pointer;
+  color: #fff;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+  z-index: 3;
+
+}
+
+
+
+:where(.hexagon1, .hexagon2, .hexagon3, .hexagon4, .hexagon5, .hexagon6, .hexagon7)::before,
+:where(.hexagon1, .hexagon2, .hexagon3, .hexagon4, .hexagon5, .hexagon6, .hexagon7):after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 106.07px;
+  height: 106.07px;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background-color:transparent;
+  left: 19.9670px;
+  
+}
+
+:where(.hexagon1, .hexagon2, .hexagon3, .hexagon4, .hexagon5, .hexagon6, .hexagon7):before {
+  top: -53.0330px;
+  border-top: solid 2.8284px #0e012e;
+  border-right: solid 2.8284px #0e012e;
+}
+
+:where(.hexagon1, .hexagon2, .hexagon3, .hexagon4, .hexagon5, .hexagon6, .hexagon7):after {
+  bottom: -53.0330px;
+  border-bottom: solid 2.8284px #0e012e;
+  border-left: solid 2.8284px #0e012e;
+}
+
+
+
+.hexagon1 {grid-column:3 / span 2; grid-row: 1 /span 2}
+.hexagon2 {grid-column:1 / span 2; grid-row: 2 /span 2} 
+.hexagon3 {grid-column:5 / span 2; grid-row: 2 /span 2} 
+.hexagon4 {grid-column:3 / span 2; grid-row: 3 /span 2} 
+.hexagon5 {grid-column:1 / span 2; grid-row: 4 /span 2} 
+.hexagon6 {grid-column:5 / span 2; grid-row: 4 /span 2} 
+.hexagon7 {grid-column:3 / span 2; grid-row: 5 /span 2} 
+
+
+.hexagon2, .hexagon5{margin:0 -1em 0 1em;}
+.hexagon3, .hexagon6{margin: 0 1em 0 -1em}
+
+.work-title{
+  visibility: hidden;
+  color: #fff;
+  font-weight: 400;
+  margin-top: 3rem;
+  position:relative;
+  text-align: center;
+}
+
+h5{
+  color: rgba(255, 255, 255, 0.678);
+}
+
+h5:hover{
+  color: rgba(255, 255, 255, 0.479);
+  transform: scale(1.3);
+}
+
+.github{
+  position: relative;
+  z-index: 2;
+}
+
+.form-container{
+  color:white;
+  background-color: rgba(0, 0, 0, 0.932);
+  position: relative;
+  bottom:-40rem;
+}
+
+
+.justynaQuote-container{
+  width:60%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  position: absolute;
+  right:0;
+
+}
+
+
+.justynaQuote{
+ color: white;
+ font-family: "Licorice";
+ font-size: 3.5em;
+  font-weight: 400;
+}
+
+
+cite{
+  position: relative;
+  float:right
+}
+
+
+
+form{
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  position: relative;
+  width:35%;
+  margin:1rem;
+  background-color: rgba(20, 20, 24, 0.432);
+  text-align: center;
+  border-radius:10px;
+  height: 520px;
+  border:rgba(4, 1, 22, 0.671) 2px solid;
+  margin-top: 30px;
+ 
+  
+}
+
+input{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 1rem;
+  width:100%;
+  border:2px solid #0e012e;
+  border-radius:10px;
+  background-color: transparent;
+  cursor: pointer;
+  
+}
+
+input[type]{
+  color:white;
+  letter-spacing: 1px;
+}
+
+
+textarea{
+  margin-top: 30px;
+  padding: 3rem;
+  margin: 0 0 10px;
+  min-width: 75%;
+  border-radius:10px;
+  border:2px solid #0e012e;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+  color: white;
+}
+
+:where(input,textarea):hover{
+  border:2px solid #1c025f;
+
+}
+
+.form-btn{
+  padding:1rem 2rem;
+  border-radius:10px;
+  background-color: transparent;
+  border:2px solid #2e012a;
+  color:rgba(255, 255, 255, 0.397);
+  letter-spacing: 3px;
+  cursor: pointer;
+ 
+}
+
+.form-btn:hover{
+  border:2px solid #53024d;
+}
+
+
+@media screen and (max-width: 1024px){
+
+  .btn{
+    width:40%;
+    padding:5px;
+  }
+
+
+  .projects-container{
+ 
+    border-radius:50%;
+    margin-right: 2rem;
+    width:55%;
+  }
+
+}
+
+
+
+
+@media screen and (max-width: 768px){
+
+body{
+  overflow:visible;
+}
+
+
+  
+.myIntro{
+  width:90%;
+  margin: 0 auto;
+  position:relative;
+  
+}
+
+
+.myIntro-Btns{ 
+  padding:1.2rem;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+  }
+
+  .btn{
+    padding:0px;
+  }
+
+  .projects-container{
+    position: relative;
+    margin:-4rem auto 0rem;
+    width: 75%;
+    animation: none;
+    height: 750px;
+  }
+
+  .work-title{
+    visibility: inherit;
+  }
+
+
+  .justynaQuote-container{
+    width:auto;
+    position: relative;
+    margin-top: 4.5rem;
+  }
+
+  .justynaQuote{
+  font-size: 1.7em;
+  }
+ 
+  .form-container{
+ 
+    position: relative;
+    left:0;
+    right:0;
+    bottom:0;
+   
+  }
+  video{
+    min-height: 100%; 
+  }
+
+  form{
+   width:auto;
+  }
+  
+
+}
+
+@media screen and (max-width: 450px){
+
+  .myIntro{
+    position: relative;
+    padding: 1rem;
+    margin-top:3rem;
+
+  }
+
+
+  .myIntro-Btns{ 
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+  }
+
+
+  .projects-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    animation: none;
+    height: 800px;
+    margin:-5rem auto 2rem;
+    border-radius: 0%;
+    width: auto;
+    
+  }
+
+  
+li,a{
+padding: 10px 5px;
+}
+
+  
+.hexagon2, .hexagon5{margin:1em -10em 0 -0.1em;}
+.hexagon3, .hexagon6{margin: -6.6em 10em 0em 0em}
+
+.work-title{
+  visibility: inherit;
+  margin-top: 0;
+}
+
+
+video{
+height: 120vh; 
+}
+
+
+input,textarea{
+ 
+  width:auto;
+}
+
+
+}
+
+
+
