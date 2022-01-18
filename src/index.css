@@ -7,8 +7,6 @@ body{
   margin:0;
   background-color:black;
   font-family: 'Raleway', 'Poppins';
-  max-width: 100vw  !important;
-  height: auto;
 }
 
 
@@ -29,33 +27,49 @@ li,a{
   display: block;
   color:white;
   text-align: center;
-  padding: 10px 16px;
+  padding: 10px 20px;
   text-decoration: none;
   float: left;
   animation:fadeInRight;
   animation-duration: 2s;
 }
 
-video{
-  width: 100vw;
-  max-height: 100vh;
+
+.full-screen-video-container {
+  position: relative;
+  top:-7rem;
+  height: 145vh;
+  width: 98.45vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   object-fit: cover;
+}
+
+
+.full-screen-video-container video {
   z-index: -1;
   position: absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom: 0;
-  overflow: hidden;
+  width: auto;
+  height:100%;
+  min-width: 100%;
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: fill;
 }
 
 .myIntro{
   width:40%;
   color: rgba(255, 255, 255, 0.788);
   letter-spacing:1px;
+  line-height: 1.7rem;
   position: absolute;
+  top:25%;
   padding: 1rem;
-  height: 75vh;
+  height: 100vh;
   animation: fadeInLeft;
   animation-duration: 2s;
 }
@@ -101,7 +115,7 @@ video{
   align-items: center;
   position: absolute;
   border-radius:50%;
-  top:70px;
+  top:90px;
   right:0;
   bottom:0;
   margin-right: 4rem;
@@ -218,7 +232,7 @@ h5:hover{
   color:white;
   background-color: rgba(0, 0, 0, 0.932);
   position: relative;
-  bottom:-40rem;
+  bottom:5rem;
 }
 
 
@@ -324,12 +338,16 @@ textarea{
 
 @media screen and (max-width: 1024px){
 
-  .btn{
-    width:40%;
-    padding:5px;
-  }
+input,textarea{
+  margin-left: -20px;
+  
+}
 
+.btn{
+  padding: 0;
+}
 
+ 
   .projects-container{
  
     border-radius:50%;
@@ -337,9 +355,9 @@ textarea{
     width:55%;
   }
 
+
+
 }
-
-
 
 
 @media screen and (max-width: 768px){
@@ -348,23 +366,9 @@ body{
   overflow:visible;
 }
 
-
-  
 .myIntro{
-  width:90%;
-  margin: 0 auto;
-  position:relative;
-  
-}
-
-
-.myIntro-Btns{ 
-  padding:1.2rem;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
-  }
-
-  .btn{
-    padding:0px;
+  width:auto;
+   
   }
 
   .projects-container{
@@ -398,32 +402,27 @@ body{
     bottom:0;
    
   }
-  video{
-    min-height: 100%; 
-  }
+ 
 
   form{
    width:auto;
   }
+
+  
   
 
 }
 
-@media screen and (max-width: 450px){
+@media screen and (max-width: 425px){
 
+
+  header{
+    justify-content: space-evenly;
+  }
   .myIntro{
-    position: relative;
-    padding: 1rem;
-    margin-top:3rem;
-
+  width:auto;
+   
   }
-
-
-  .myIntro-Btns{ 
-    margin-top: -1rem;
-    margin-bottom: 2rem;
-  }
-
 
   .projects-container{
     display: flex;
@@ -451,19 +450,36 @@ padding: 10px 5px;
   margin-top: 0;
 }
 
-
-video{
-height: 120vh; 
-}
-
-
-input,textarea{
+textarea{
  
   width:auto;
 }
 
+.myIntro-Btns{ 
+  margin-top: 3rem;
+  margin-right: 0.5rem;
 
 }
 
+.btn{
+  width:45%;
+  height: 15vh;
+  padding:0.2rem;
 
+}
+
+}
+
+@media screen and (max-width: 320px){
+
+
+  .btn{
+   transform: scale(0.9);
+   width:50%;
+   
+    
+  
+  }
+
+}
 
