@@ -7,26 +7,17 @@ import Intro from './Intro'
 import Form from './Form'
 
 function App() {
-
-
-    return (
+return (
     <div>
     <Header/>
     <BackgroundVideo/>
     <Intro/> 
     <div>
     <Projects/>
-</div>
-   
-    <Form/>
-    
-    
     </div>
-
-        
-
-
+    <Form/>
+    </div>
     )
 }
 
-export default App
+export default App;
