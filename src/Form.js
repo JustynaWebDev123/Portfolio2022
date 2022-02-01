@@ -33,7 +33,7 @@ const handleSubmit=(e)=>{
     </div>
             
 
-<form autoComplete="off" onSubmit={handleSubmit} id='form'>
+<form autoComplete="off" onSubmit={handleSubmit} id='form' name="contact" method="POST" data-netlify="true">
 
     <h2>Contact me</h2> 
 

@@ -7,7 +7,7 @@ function Header() {
             <h1 className='logo'><BsGem/></h1>
             <nav className='nav-container'>
                 <ul>
-                <li><a href="about.asp">About me</a></li>
+                <li><a href="https://justyna-about-me.netlify.app" target="_blank" rel="noopener noreferrer">About me</a></li>
                 <li><a href="#form">Contact</a></li>
                 </ul>
             </nav>           
