@@ -53,7 +53,7 @@ const handleSubmit=(e)=>{
      type="text"
      placeholder='Last name'
      name="lastName"
-     value={inputs.lastName ||''}
+     value={inputs.lastName}
      onChange={handleChange}
      className="lastName"
      tabIndex="2"
@@ -64,7 +64,7 @@ const handleSubmit=(e)=>{
      type="email"
      name="email"
      id="email"
-     value={inputs.email ||''}
+     value={inputs.email}
      onChange={handleChange}
      className="email"
      placeholder="example@corp.com"

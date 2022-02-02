@@ -407,6 +407,10 @@ input,textarea{
   form{
    width:auto;
   }
+  h5{
+    z-index: 2000;
+    cursor: pointer;
+  }
 }
 
 @media screen and (max-width: 425px){
@@ -453,9 +457,6 @@ textarea{
   width:auto;
  }
 
- h5{
-   cursor: pointer !important;
- }
 }
 
 
