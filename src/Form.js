@@ -33,7 +33,7 @@ const handleSubmit=(e)=>{
     </div>
             
 
-<form autoComplete="off" onSubmit={handleSubmit} id='form' name="contact" method="POST" data-netlify="true">
+<form autoComplete="off" onSubmit={handleSubmit} id='form' name="contact" netlify netlify-honeypot="bot-field" hidden method="post">
 
     <h2>Contact me</h2> 
 
