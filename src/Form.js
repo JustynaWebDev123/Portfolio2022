@@ -33,8 +33,8 @@ const handleSubmit=(e)=>{
     </div>
             
 
-<form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" autoComplete="off" onSubmit={handleSubmit} id='form'>
-
+<form name="contact" method="post" autoComplete="off" onSubmit={handleSubmit} id='form'>
+<input type="hidden" name="form-name" value="contact" />
     <h2>Contact me</h2> 
 
 <div className="name">
@@ -42,8 +42,8 @@ const handleSubmit=(e)=>{
 <input
      type="text"
      placeholder='First name'
-     name="firstName"
-     value={inputs.firstName ||''}
+     name="name"
+     value={inputs.name||''}
      onChange={handleChange}
      className="firstName"
      tabIndex="1"
@@ -52,8 +52,9 @@ const handleSubmit=(e)=>{
 <input
      type="text"
      placeholder='Last name'
-     name="lastName"
-     value={inputs.lastName}
+     id="surname"
+     name="surname"
+     value={inputs.surname}
      onChange={handleChange}
      className="lastName"
      tabIndex="2"
@@ -74,6 +75,7 @@ const handleSubmit=(e)=>{
 <textarea
   placeholder="Start typing..."
   className="message"
+  id='message'
   name="message"
   value={textarea}
   onChange={e => setTextarea(e.target.value)}
