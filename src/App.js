@@ -1,10 +1,10 @@
-import React from 'react'
-import Header from './Header'
-import BackgroundVideo from './BackgroundVideo'
-import "./index.css"
-import Projects from './Projects'
-import Intro from './Intro'
-import Form from './Form'
+import React from 'react';
+import Header from './Header';
+import BackgroundVideo from './BackgroundVideo';
+import "./index.css";
+import Projects from './Projects';
+import Intro from './Intro';
+import Form from './Form';
 
 function App() {
 return (

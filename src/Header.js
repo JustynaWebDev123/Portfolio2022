@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { BsGem } from "react-icons/bs";
 
 function Header() {

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Aos from 'aos';
 import { useEffect } from 'react/cjs/react.development';
 import {VscGithub} from 'react-icons/vsc';
@@ -10,7 +10,7 @@ function Projects() {
         Aos.init({
         duration:2000
           });
-    })
+    });
 
 return (
         <div>

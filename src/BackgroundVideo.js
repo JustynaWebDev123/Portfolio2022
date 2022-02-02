@@ -1,5 +1,5 @@
-import React from 'react'
-import video from './Design/Smoke - 58503.mp4'
+import React from 'react';
+import video from './Design/Smoke - 58503.mp4';
 
 function BackgroundVideo() {
     return (
