@@ -452,6 +452,10 @@ textarea{
   padding:1rem;
   width:auto;
  }
+
+ h5{
+   cursor: pointer !important;
+ }
 }
 
 
