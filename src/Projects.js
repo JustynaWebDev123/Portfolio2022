@@ -1,6 +1,6 @@
 import React from 'react';
 import Aos from 'aos';
-import { useEffect } from 'react/cjs/react.development';
+import { useEffect } from 'react';
 import {VscGithub} from 'react-icons/vsc';
 
 
