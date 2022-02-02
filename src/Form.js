@@ -1,30 +1,13 @@
-import React,{useState} from 'react';
+import React from 'react';
 
 
-const encode = (data) => {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])).join('&');
-  }
+
 
 function Form() {
 
 
 
-    const [state, setState] = useState({name: '', email: '', message: '' })
-
-    const handleChange = e =>
-      setState({...state, [e.target.name]: e.target.value })
-  
-    const handleSubmit = e => {
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({ 'form-name': 'contactForm', ...state })
-      })
-        .then(() => alert('Success!'))
-        .catch(error => alert(error))
-      e.preventDefault()
-    }
+   
   
     
     
@@ -44,34 +27,26 @@ function Form() {
     </blockquote>
 
     </div>
-            
-    <form 
-      className='contactForm' 
-      onSubmit={handleSubmit}>
 
-      <input 
-        type='text' 
-        name='name' 
-        value={state.name}
-        placeholder='Enter your name'
-        onChange={handleChange} />
+ 
+    <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-filed">
+    
+          <p>
+            <label>Your Name: <input type="text" name="name"/></label>
+          </p>
+          <p>
+            <label>Your Email: <input type="email" name="email"/></label>
+          </p>
+          <p>
+            <label>Message: <textarea name="message"></textarea></label>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>
+       
 
-      <input 
-        type='email' 
-        name='email' 
-        value={state.email}
-        placeholder='Enter your email'
-        onChange={handleChange} />
-
-      <textarea 
-        name='message' 
-        placeholder='Messaage'
-        value={state.message}
-        onChange={handleChange}></textarea>
-      <button type='submit'>Submit</button>
-    </form>
-  
-
+    
 </div>
 </div>
     )
