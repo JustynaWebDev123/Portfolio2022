@@ -1,20 +1,8 @@
-import React,{useState} from 'react';
+import React from 'react';
 
 function Form() {
     
-    const [inputs, setInputs] = useState({});
-    const [textarea,setTextarea]=useState();
-
-const handleChange=(e)=>{
-    const name = e.target.name;
-    const value = e.target.value;
-    setInputs(values => ({...values, [name]: value}));
-}
-
-const handleSubmit=(e)=>{
-    e.preventDefault();
-    alert("Please fill out this form:)");
-}
+    
 
     return (
         
@@ -32,67 +20,29 @@ const handleSubmit=(e)=>{
 
     </div>
             
+    <form 
+      method='POST' 
+      name='contactform' 
+      className='contactForm'>
 
-<form name="contact" method="post" autoComplete="off" onSubmit={handleSubmit} id='form'>
-<input type="hidden" name="form-name" value="contact" />
-    <h2>Contact me</h2> 
+      <input 
+        type='text' 
+        name='name' 
+        placeholder='Enter your name' />
 
-<div className="name">
+      <input 
+        type='email' 
+        name='email' 
+        placeholder='Enter your email' />
 
-<input
-     type="text"
-     placeholder='First name'
-     name="name"
-     value={inputs.name||''}
-     onChange={handleChange}
-     className="firstName"
-     tabIndex="1"
-/>
+      <textarea 
+        name='message' 
+        placeholder='Messaage'></textarea>
 
-<input
-     type="text"
-     placeholder='Last name'
-     id="surname"
-     name="surname"
-     value={inputs.surname}
-     onChange={handleChange}
-     className="lastName"
-     tabIndex="2"
-/>
+      <button type='submit'>Submit</button>
 
+    </form>
 
-<input
-     type="email"
-     name="email"
-     id="email"
-     value={inputs.email}
-     onChange={handleChange}
-     className="email"
-     placeholder="example@corp.com"
-     tabIndex="3"
-/>
-
-<textarea
-  placeholder="Start typing..."
-  className="message"
-  id='message'
-  name="message"
-  value={textarea}
-  onChange={e => setTextarea(e.target.value)}
-/>
-</div>
-
-<div>
-
-<button 
- className='form-btn'
- name="submit" 
- type="submit" 
- id="contact-submit">Submit</button>
-
-</div>
-
-</form>
 
 </div>
 </div>
