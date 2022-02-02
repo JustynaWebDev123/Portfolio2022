@@ -3,11 +3,6 @@ import React from 'react';
 
 function Form() {
 
-    const handleSubmit=(e)=>{
-        e.preventDefault();
-        alert("Please fill out this form:)");
-    };
-
     return (
         
     <div>
@@ -24,7 +19,7 @@ function Form() {
 
     </div>
 
-    <form autoComplete="off" name="contact-form" data-netlify="true" method="POST" onSubmit={handleSubmit}>
+    <form autoComplete="off" name="contact-form" data-netlify="true" method="POST">
     <input type="hidden" name="form-name" value="contact-form" />
 
     <h2>Contact me</h2> 
