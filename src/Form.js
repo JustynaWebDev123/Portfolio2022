@@ -29,7 +29,7 @@ function Form() {
 
     </div>
 
-    <form name="contact-form" data-netlify="true" method="POST">
+    <form name="contact-form" data-netlify="true" method="POST" id='myform'>
     <input type="hidden" name="form-name" value="contact-form" />
           <p>
             <label>Your Name: <input type="text" name="name"/></label>
