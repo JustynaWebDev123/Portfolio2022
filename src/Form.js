@@ -28,9 +28,8 @@ function Form() {
 
     </div>
 
- 
-    <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-filed">
-    
+    <form name="contact-form" data-netlify="true" method="POST">
+    <input type="hidden" name="form-name" value="contact-form" />
           <p>
             <label>Your Name: <input type="text" name="name"/></label>
           </p>
@@ -44,8 +43,6 @@ function Form() {
             <button type="submit">Send</button>
           </p>
         </form>
-       
-
     
 </div>
 </div>
