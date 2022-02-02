@@ -1,17 +1,12 @@
 import React from 'react';
 
 
-
-
-
 function Form() {
 
-
-
-   
-  
-    
-    
+    const handleSubmit=(e)=>{
+        e.preventDefault();
+        alert("Please fill out this form:)");
+    };
 
     return (
         
@@ -29,22 +24,57 @@ function Form() {
 
     </div>
 
-    <form name="contact-form" data-netlify="true" method="POST" id='myform'>
+    <form autoComplete="off" name="contact-form" data-netlify="true" method="POST" onSubmit={handleSubmit}>
     <input type="hidden" name="form-name" value="contact-form" />
-          <p>
-            <label>Your Name: <input type="text" name="name"/></label>
-          </p>
-          <p>
-            <label>Your Email: <input type="email" name="email"/></label>
-          </p>
-          <p>
-            <label>Message: <textarea name="message"></textarea></label>
-          </p>
-          <p>
-            <button type="submit">Send</button>
-          </p>
-        </form>
-    
+
+    <h2>Contact me</h2> 
+
+    <div className="name">
+         
+<input
+     type="text"
+     placeholder='First name'
+     name="name"
+     className="firstName"
+     tabIndex="1"
+     />
+
+<input
+     type="text"
+     placeholder='Last name'
+     name="name"
+     className="firstName"
+     tabIndex="2"
+     />
+
+
+<input
+     type="email"
+     name="email"
+     className="email"
+     placeholder="example@corp.com"
+     tabIndex="3"
+/>   
+         
+<textarea
+    placeholder="Start typing..."
+    className="message"
+    name="message"
+    tabIndex="4"
+/>
+</div>
+         
+<div>
+
+<button 
+    className='form-btn'
+    name="submit" 
+    type="submit" 
+    id="contact-submit">Submit</button>
+
+</div>
+
+</form>
 </div>
 </div>
     )
