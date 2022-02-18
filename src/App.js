@@ -5,6 +5,7 @@ import "./index.css";
 import Projects from './Projects';
 import Intro from './Intro';
 import Form from './Form';
+import Feedback from './Feedback';
 
 function App() {
 return (
@@ -12,11 +13,11 @@ return (
     <Header/>
     <BackgroundVideo/>
     <Intro/> 
-    <div>
     <Projects/>
-    </div>
     <Form/>
-    </div>
+    <Feedback/>
+   
+</div>
     )
 }
 

@@ -1,6 +1,7 @@
 import React from 'react';
 
 
+
 function Intro() {
   
   const copy = async () => {
@@ -9,6 +10,7 @@ function Intro() {
       }
 
   return (
+    
     <main>
       <div className="myIntro">
       <h1>I am Justyna,</h1>

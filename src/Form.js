@@ -19,7 +19,7 @@ function Form() {
 
     </div>
 
-    <form autoComplete="off" name="contact-form" data-netlify="true" method="POST" id="form">
+    <form className='form-contact' autoComplete="off" name="contact-form" data-netlify="true" method="POST" id="form">
     <input type="hidden" name="form-name" value="contact-form" />
 
     <h2>Contact me</h2> 

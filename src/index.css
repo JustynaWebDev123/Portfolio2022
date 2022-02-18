@@ -265,7 +265,7 @@ cite{
   float:right
 }
 
-form{
+.form-contact{
   display:flex;
   flex-direction: column;
   justify-content:center;
@@ -337,6 +337,47 @@ textarea{
 }
 
 
+.feedback-container{
+  border-bottom:solid rgb(2, 9, 71) 2px;
+  width:25%;
+  text-align: center;
+  top:-7rem;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index: 1;
+  position: relative;
+  float: right;
+  margin:2rem;
+  
+}
+
+.Collapsible{
+cursor: pointer;
+color: white;
+letter-spacing: 0.2rem;
+background-color: black;
+padding:1rem;
+}
+
+.stars{
+  padding:1rem;
+}
+
+.feedback-form{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding:2rem;
+}
+
+.message-feedback{
+  margin:1rem auto;
+  min-width:auto;
+}
+
+
 @media screen and (max-width: 1500px){
 
   input,textarea{
@@ -404,13 +445,22 @@ input,textarea{
    
   }
  
-  form{
+  .form-contact{
    width:auto;
   }
   h5{
     z-index: 2000;
     cursor: pointer;
   }
+
+  .feedback-container{
+  width:100%;
+  position: relative;
+  top:3rem;;
+  margin:0 auto;
+    
+  }
+
 }
 
 @media screen and (max-width: 425px){
